@@ -1,0 +1,160 @@
+/* body 样式 */
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 新增，使内容垂直居中 */
+    height: 100vh; 
+    margin: 0; /* 移除左右自动边距 */
+    font-size: 12px;
+    color: #fff;
+}
+
+/* container 样式 */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px; /* 限制最大宽度，防止内容溢出 */
+}
+
+/* header 样式保持不变 */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 66vmax;
+    padding: 0.7em 0;
+}
+
+header p {
+    padding-top: 2px;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.7em;
+}
+
+.bluepart {
+    width: 88px;
+    height: 8px;
+    background-color: rgb(30, 94, 146);
+    position: relative;
+    z-index: -1;
+    top: -15px;
+    left: 45px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+nav ul li {
+    border-radius: 15px;
+    padding: 0.25em 1em;
+    height: 0.9em;
+    scale: 1;
+    transition: all 0.3s ease;
+}
+
+nav li:nth-of-type(3) {
+    background-color: rgb(31, 99, 188);
+    border-radius: 15px;
+    padding: 0.35em 1em;
+}
+
+ul li a {
+    text-decoration: none;
+    font-family: "open sans", sans-serif;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3 ease;
+}
+
+ul li a:hover {
+    color: #222;
+}
+
+ul li:hover {
+    background-color: rgb(31, 99, 188);
+    color: #222;
+    border-radius: 15px;
+    scale: 1.2;
+}
+
+/* banner 样式保持不变 */
+.banner {
+    background-image: url(../images/milky-way.jpg);
+    width: 66vmax;
+    height: 57vh;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 15px;
+    animation: zoom 20s forwards;
+}
+
+@keyframes zoom {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 120%;
+    }
+}
+
+.banner p {
+    font-family: "robert", sans-serif;
+    padding-left: 20px;
+}
+
+.banner p:nth-of-type(1),
+.banner p:nth-of-type(3) {
+    padding-bottom: 0.6em;
+}
+
+.banner p:nth-of-type(2) {
+    font-size: 1.7em;
+    font-weight: 630;
+}
+
+.banner span {
+    font-weight: 650;
+    background-image: linear-gradient(135deg, #f02fc2, #6094ea, #fdcbf1, #f02fc2);
+    background-size: 500%;
+    display: initial;
+    background-clip: text;
+    color: transparent;
+    animation: solar 5s linear infinite;
+}
+
+@keyframes solar {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* part3 样式 */
+.part3 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+    font-family: "open sans", sans-serif;
+}
+
+.part3 p {
+    font-size: 1.5em;
+}
+
+/* planets 样式 */
