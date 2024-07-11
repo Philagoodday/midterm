@@ -1,7 +1,9 @@
-:root {
+:root{
     --bg-color: rgb(30, 94, 146);
     --hover-color: rgb(99, 204, 220);
     --active-color: #911e76;
+    --font-serif: "Playfair Display", serif;
+    --font-san:"Lato", sans-serif;
 }
 
 
@@ -12,7 +14,7 @@
     color: #fff;
     padding: 8px;
     z-index: 1000;
-    transition: top 0.3s, left 0.3s; 
+    transition: top 0.3s, left 0.3s ease-in-out; 
     text-align: center;
 }
 
@@ -35,7 +37,7 @@ body{
     justify-content: center;
     height: 100vh; 
     margin:0;
-    font-size: 12px;
+    font-size: 0.7em;
     color: #fff;
     align-items: center;
 
@@ -63,19 +65,27 @@ header{
 header p{
     padding-top: 2px;
     color: aliceblue;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:var(--font-serif);
     font-size: 1.7em;
+}
+
+.title p::after{
+    border:red 5px solid ;
+    width: 8px;
+    height: 8px;
+    background-color: var(--bg-color);
+    
+    
 }
 
 .bluepart{
     width: 88px;
     height: 8px;
-    background-color: var(--bg-color);
+    background-color: var(--hover-color);
     position: relative;
     z-index: -1;
-    top: -15px;
-    left: 45px;
-    
+    top:-15px;
+    left: 40px;
 }
 
 nav ul{
@@ -96,13 +106,22 @@ nav ul li{
 nav li:nth-of-type(3){
     background-color: var(--bg-color);
     border-radius: 15px;
-    padding:0.35em 1em;
+    padding: 0.5em 1em;
+}
+
+nav li:nth-of-type(3):hover{
+    background-color: var(--hover-color);
+    border-radius: 15px;
+    padding: 0.5em 1em;
+    color: #222;
+
 }
 
 ul li a{
     text-decoration: none;
-    font-family:"open sans",sans-serif ;
-    font-weight: 600;
+    font-family:var(--font-san) ;
+    font-size: 1.15em;
+    font-weight: 580;
     color: white;
     transition: all 0.3 ease;
     
@@ -110,6 +129,7 @@ ul li a{
 
 ul li a:hover{
     color: #222;
+    border-radius: 15px;
 }
 
 ul li:hover{
@@ -166,8 +186,8 @@ ul li:hover{
 }
 
 .banner p{
-    font-family:"robert",sans-serif ;
-    padding-left: 20px;
+    font-family:var(--font-san) ;
+    padding-left: 17px;
     
     width: 100%;
     height: 5%;
@@ -178,8 +198,7 @@ ul li:hover{
 }
 
 .banner p:nth-of-type(2){
-    font-size: 1.7em;
-    /* font-weight: 630; */
+    font-size: 1.9em;
 }
 
 .banner span{
@@ -211,12 +230,12 @@ ul li:hover{
     display: flex;
     flex-direction: column;
     padding-top: 8px;
-    font-family: "open sans", sans-serif;
+    font-family: var(--font-san);
 }
 
 .part3 p{
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 680;
 }
 
 .planets{
@@ -228,12 +247,16 @@ ul li:hover{
 } 
 
 .listdiv{
-    display: flex;
-    flex-direction:column;
-    padding: 10px;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center; 
+    align-items: center; 
+    height: fit-content;
     width: auto;
     gap:10px;
-    align-items: center;
+    
 }
 
 .listdiv img{

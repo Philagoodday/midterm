@@ -7,7 +7,7 @@
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapi    s.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
@@ -17,12 +17,12 @@
     <a href="#mainpart" class="acclink">Skip to main content</a>
 
     <div class="container">
-    <header>
+    <header role="banner">
         <div class="title">
         <p>THE SYSTEM<p>
             <div class="bluepart"></div>
         </div>
-        <nav id="navpart" >
+        <nav id="navpart" role="navigation" >
             <ul>
                 <li><a href="https://en.wikipedia.org/wiki/Planet">Planets</a></li>
                 <li><a href="https://en.wikipedia.org/wiki/Interstellar">Interstellar</a></li>
@@ -31,7 +31,7 @@
         </nav>
     </header>
     
-    <main id="mainpart" >
+    <main id="mainpart" role="main">
         <div class="banner">
             <div class="words">
             <p>THE SYSTEM MAGAZINE</p>
@@ -41,7 +41,7 @@
         </div>
         </div>
 
-        <div class="part3">
+        <section class="part3" role="region">
         <p>Meet the Locals</p>
 
         <div class="planets">
@@ -81,10 +81,10 @@
                 <a class="plantslinks" href="https://en.wikipedia.org/wiki/Mars">Learn more</a>
             </div>
         </div>
-    </div>
+        </section>
     </main>
     
-    <footer>
+    <footer role="contentinfo">
         <p>&copy;2024 - The System</p>
     </footer>
     </div>  
